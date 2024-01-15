@@ -4,6 +4,7 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/preline/preline.js',
   ],
   theme: {
     extend: {
@@ -13,8 +14,9 @@ module.exports = {
       },
       colors: {
         primary: '#B68C5A',
+        secondary: '#707070',
       },
     },
   },
-  plugins: [],
+  plugins: [require('preline/plugin')],
 };

@@ -1,5 +1,8 @@
 import { poppins } from '@/app/fonts';
 import './globals.css';
+import NavBar from '@/app/components/NavBar/NavBar';
+import Footer from '@/app/components/Footer/Footer';
+import SmallNavBar from '@/app/components/NavBar/SmallNavBar';
 
 export const metadata = {
   title: 'Legal Solutions',
@@ -8,8 +11,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="max-w-screen-xl mx-auto">
-      <body className={poppins.className}>{children}</body>
+    <html lang="en" className="max-w-screen-xl mx-auto my-5">
+      <body className={poppins.className}>
+        {/* <NavBar /> */}
+        <SmallNavBar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
